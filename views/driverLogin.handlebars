@@ -1,0 +1,91 @@
+<link rel="stylesheet" href="static\login.css" type="text/css"/>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+ background-color:bisque;
+font-family: cursive;
+}
+
+.glow {
+font-size: 80px;
+color: #fff;
+text-align: center;
+animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+from {
+text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px rgb(207, 45, 45), 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+}
+
+to {
+text-shadow: 0 0 20px #fff, 0 0 30px #4c39f6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+}
+}
+</style>
+</head>
+<body>
+
+<h1 class="glow">CABIFY DRIVER</h1>
+
+</body>
+</html>
+  <div class="container">
+
+        <div class="row">
+           
+            <div class="col-sm-6 offset-sm-3">
+               
+                
+                  <form name="loginform" id="loginform" method="post">
+
+                    <div>
+                        <label>Email</label>
+                        <input type="email" name="email" class="form-control" placeholder="example@mail.com" minlength="5" maxlength="50" required>
+                    </div>
+                  
+                   
+                    <div>
+                        <label>Password</label>
+                        <input type="password" name="password" class="form-control"  minlength="8" maxlength="25" required>
+                    </div>
+
+                    <div class="send_bt">
+
+                        <button type="submit" class="login1" id="login1">Login</button>   
+                        {{#if message}}
+                        <p class="text-danger">{{message}}</p>
+                        {{/if}} 
+
+                     </div>
+
+                     <div class="signup_link">
+
+                New driver to our site ? <a href="/driverRegister">SignUp</a></div>
+
+
+<div>
+          Are your a passenger click here to <a href="/Login" >Login</a>
+
+            </div>
+
+                    </form>   
+
+
+
+                    
+
+
+
+
+
+
+    
+    
+	
+	
+
+
+

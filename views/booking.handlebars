@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="/static/booking.css" type="text/css">
+  <div class="container">
+       <style>
+    body{
+       background-color:cornsilk;
+    }
+</style>
+            <div class="header">
+                <h2 >Book your luxurious trip with us</h1>
+            </div>
+            <div class="mid-container">
+            <form method="post">
+                <label for = "pickUp" type="form-control">Pick Up:</label>
+
+                <select name="pickUp" id="pickUp" type="form-control">
+
+                    {{#each data}}
+
+                    <option value="{{this.dataValues.from}}">{{this.dataValues.from}}</option>
+
+                    {{/each}}
+
+                </select>
+                <div>
+                    <br>
+               <label for = "drop">Drop:</label>
+
+                <select name="drop" id="drop" type="form-control">
+
+                    {{#each data}}
+
+                    <option value="{{this.dataValues.to}}">{{this.dataValues.to}}</option>
+
+                    {{/each}}
+
+                </select>
+                </br>
+                </div>
+                <div class="alert-danger" id="location"></div>
+                <br/>
+                <div id="dateDiv">
+                    <label for = "date">pick your date:</label>
+                    <input type="date" id="date"  name="date">
+                </div>
+                <br/>
+                <div id="timeDiv">
+                    <label for = "time">pick your time of arraival:</label>
+                    <input type="time" id="time" placeholder="pick-up time" name="time">
+                </div>
+                <br/>
+                <div id="searchDiv">
+                    <button type="submit" id="bookNow">Book Now</button>
+                </div>
+            </form>    
+            </div>
+</div>

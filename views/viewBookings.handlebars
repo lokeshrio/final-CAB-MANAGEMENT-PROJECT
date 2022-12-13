@@ -1,0 +1,59 @@
+<div class="col-sm-6 offset-sm-3">
+    <style>
+    body{
+       background-color:cornsilk;
+    }
+</style>
+
+    
+    <form method="post">
+    <label for="date" >Date</label>
+    <input type="date" name="date" id="date" class="form-control">
+    <button type="submit" class="btn btn-primary" onclick="changeFlag()">Search</button>
+
+
+</form>
+
+</div>
+{{#if found}}
+    <div class="alert alert-danger" role="alert">Sorry No bookings found on this date!</div>
+{{/if}}
+<h1 class="text-center">Booking Details</h1>
+<div class="container">
+     <a href="viewBookings">
+        <button class="btn btn-success">View all Booking Details</button>
+    </a>
+    <table class="table table-striped" >
+        <tr>
+            <th>Booking Id</th>
+            <th>Date of booking</th>
+            <th>Cab From</th>
+            <th>Cab To</th>
+            <th>Booking Time</th>
+            <th>Cab No</th>
+            <th>Cost</th>
+            <th>Passenger Id</th>
+            <th>Driver Id</th>
+            
+        </tr>
+        {{#each data}}
+
+        <tr>
+            <td>{{this.dataValues.bookingId}}</td>
+            <td>{{this.dataValues.dateOfBooking}}</td>
+            <td>{{this.dataValues.cabFrom}}</td>
+            <td>{{this.dataValues.cabTo}}</td>
+            <td>{{this.dataValues.bookingTime}}</td>
+            <td>{{this.dataValues.cabNo}}</td>
+            <td>{{this.dataValues.cost}}</td>
+            <td>{{this.dataValues.passengerId}}</td>
+            <td>{{this.dataValues.driverId}}</td>
+           
+            
+        </tr>
+        {{/each}}
+
+    </table>
+   
+    
+</div>

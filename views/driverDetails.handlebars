@@ -1,0 +1,52 @@
+<h1 class="text-center">Cab Drivers</h1>
+<style>
+    body{
+        background-image: url("https://images.thequint.com/thequint%2F2020-05%2F76e68df0-d495-4221-a5f4-317faa92ffbd%2Ftaxi_cab_drivers_quint_kuwait_india_corona_covid.jpg?rect=0%2C0%2C2000%2C1125&w=1200&auto=format%2Ccompress&ogImage=true&enlarge=true");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: rgb(252, 69, 69);
+    }
+    
+</style>
+<div class="container">
+    
+    <table  class="table table-striped mt-4">
+        
+        <a href="addNewDriver">
+            <button class="btn btn-success">Add Driver</button>
+
+        </a>
+        
+        <tr>
+            <th style="color:red ;">Id</th>
+            <th style="color:red ;">driver name</th>
+            <th style="color:red ;">liscense number</th>
+            <th style="color:red ;">email</th>
+            <th style="color:red ;">address</th>
+            <th style="color:red ;">dob</th>
+            <th style="color:red ;">gender</th>
+            <th style="color:red ;">password</th>
+        </tr>
+    
+        {{#each driverDetails}}
+        <tr>
+            <td style="color:white ;">{{this.dataValues.driver_Id}}</td>
+            <td style="color:white;">{{this.dataValues.driverName}}</td>
+            <td style="color:white ;">{{this.dataValues.driverLiceneceNo}}</td>
+            <td style="color:white;">{{this.dataValues.driverEmail}}</td>
+            <td style="color:white;">{{this.dataValues.driverAddress}}</td>
+            <td style="color:white ;">{{this.dataValues.driverDob}}</td>
+            <td style="color:white ;">{{this.dataValues.driverGender}}</td>
+            <td>
+                <a href="editdriver/{{this.dataValues.driver_Id}}">Edit</a>|
+                <a href="deletedriver/{{this.dataValues.driver_Id}}" onclick="return confirm('Are you sure to delete this? ')">Delete</a>
+            </td>
+        </tr>
+
+        {{/each}} 
+
+    </table>
+ <p class="text-end">You are logged in as: 
+        <b>{{data.firstName}} {{data.lastName}}</b>
+    </p>
+</div>
